@@ -16,13 +16,12 @@ class _MedsyncSignUpPageState extends State<MedsyncSignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(16.0), // Add padding as needed
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           // Add decoration as needed
-          color: Colors.grey[200],
+          color: Color.fromARGB(255, 255, 255, 255),
         ),
         child: const Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Welcome to Medsync',
