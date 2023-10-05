@@ -66,19 +66,19 @@ class _MedsyncSignUpPageState extends State<MedsyncSignUpPage> {
             ),
             const SizedBox(height: 40.0),
             GridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: 20.0,
-              mainAxisSpacing: 20.0,
-              shrinkWrap: true,
-              children: const [
-                BoxButton(imagePath: 'assets/image1.png', size: 100.0),
-                BoxButton(imagePath: 'assets/image2.png', size: 100.0),
-                BoxButton(imagePath: 'assets/image3.png', size: 100.0),
-                BoxButton(imagePath: 'assets/image4.png', size: 100.0),
-                BoxButton(imagePath: 'assets/image5.png', size: 100.0),
-                BoxButton(imagePath: 'assets/image6.png', size: 100.0),
-              ],
-            ),
+            crossAxisCount: 2,
+            crossAxisSpacing: 20.0,
+            mainAxisSpacing: 20.0,
+            shrinkWrap: true,
+            children: const [
+            BoxButton(assetName: 'lib/assets/1.png', size: 100.0),
+            BoxButton(assetName: 'lib/assets/2.png', size: 100.0),
+            BoxButton(assetName: 'lib/assets/3.png', size: 100.0),
+            BoxButton(assetName: 'lib/assets/4.png', size: 100.0),
+            BoxButton(assetName: 'lib/assets/5.png', size: 100.0),
+            BoxButton(assetName: 'lib/assets/6.png', size: 100.0),
+  ],
+),
           ],
         ),
       ),
@@ -125,13 +125,14 @@ class SearchBar extends StatelessWidget {
 }
 
 class BoxButton extends StatelessWidget {
-  final String imagePath;
+  final String assetName; // Use a variable to store the asset name
   final double size;
 
-  const BoxButton({super.key, 
-    required this.imagePath,
+  const BoxButton({
+    Key? key,
+    required this.assetName,
     required this.size,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -144,9 +145,12 @@ class BoxButton extends StatelessWidget {
         height: size,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: Colors.blue, // Set the background color as needed
-          image: DecorationImage(
-            image: AssetImage(imagePath),
+          color: const Color.fromARGB(255, 217, 215, 215), // Set the background color as needed
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: Image.asset(
+            assetName, // Remove the 'assets/' prefix
             fit: BoxFit.cover,
           ),
         ),
