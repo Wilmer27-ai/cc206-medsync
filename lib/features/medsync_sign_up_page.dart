@@ -45,7 +45,7 @@ class _MedsyncSignUpPageState extends State<MedsyncSignUpPage> {
                         minHeight: 56.0,
                         minWidth: 500.0,
                       ),
-                      hintText: 'Search for a medicine',
+                      hintText: 'Search for a diseases, remedies, etc...',
                       backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 221, 219, 219)),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50.0),
