@@ -15,7 +15,8 @@ class _MedsyncSignUpPageState extends State<MedsyncSignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SingleChildScrollView(
+        child: Container(
         constraints: const BoxConstraints(
           maxWidth: 500, // Set the maximum width for the container
         ),
@@ -64,7 +65,7 @@ class _MedsyncSignUpPageState extends State<MedsyncSignUpPage> {
                 ],
               ),
             ),
-            const SizedBox(height: 40.0),
+            const SizedBox(height: 20.0),
             GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 20.0,
@@ -81,6 +82,7 @@ class _MedsyncSignUpPageState extends State<MedsyncSignUpPage> {
 ),
           ],
         ),
+      ),
       ),
     );
   }
