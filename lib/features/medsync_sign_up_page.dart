@@ -65,7 +65,7 @@ class _MedsyncSignUpPageState extends State<MedsyncSignUpPage> {
                 ],
               ),
             ),
-            const SizedBox(height: 40.0),
+            const SizedBox(height: 20.0),
             GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 20.0,
